@@ -1,39 +1,59 @@
 import styled from "styled-components";
-import React from "react";
+import { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
 
-export const Bigbox = styled.div`
-background-color: #F3F4F6;
-border: solid yellow;
-`
 
+export const GlobalStyle = createGlobalStyle`
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+`
+export const Bigbox = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: white;
+
+`
 export const Header = styled.header`
 display: flex;
 align-items: center;
-justify-content: space-evenly;
-width: 50vw;
-border: solid;
+justify-content:flex-start;
+width: 100%;
+background-color: #d1d2d5;
 img{
+    position: relative;
     height: 12vh;
+    left: 2vw;
 }
 nav{
-    border: solid;
+    position: relative;
+    left: 4vw;
+    display: flex;
+    align-items: center;
 }
 ul{
     display: flex;
     list-style: none;
-    border: solid red;
-    justify-content: space-evenly;
-    width: 25vw;
+    justify-content:space-between;
+    align-items: center;
+    width: 17vw;
     li{
-       font-size:24px ;
+       font-size:35px;
     }
 }
 `
 export const Links = styled(Link)`
+font-family: "Satisfy", sans-serif;
+font-weight: 500;
 text-decoration: none;
-color: black;
-border: solid blue;
+color: #202B4C;
+transition: ease-in-out;
+&:hover{
+
+}
 `
 
 export const Imagem = styled.img`

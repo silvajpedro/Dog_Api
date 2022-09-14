@@ -35,11 +35,14 @@ export default function DogPage(){
     }
   })
   return(
+  <>
+    <S.GlobalStyle/>
     <S.Bigbox>
     <h1>Dogs</h1>
    <S.Imagem src={data} alt='oi'/>
-   <h2>{InfoDogs[i].nome} - {age} {age >= 1 ? 'anos': 'ano'} {age=== 0 ? '6 meses': ''} </h2>
+   <h2>{InfoDogs[i].nome} - {age} {age > 1 ? 'anos': 'ano'} {age=== 0 ? '9 meses': ''} </h2>
    <button onClick={()=> {DogsApi()}}>teste</button>
     </S.Bigbox>
+  </>
   )
 }
