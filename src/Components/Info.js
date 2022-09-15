@@ -231,7 +231,7 @@ export const InfoDogs = [
         nome: 'Lasanha'
     },
     {
-        nome: 'Temaki'
+        nome: 'Júnior'
     },
     {
         nome: 'Café'
@@ -249,7 +249,7 @@ export const InfoDogs = [
         nome: 'Sherlock'
     },
     {
-        nome: 'Onze'
+        nome: 'Bruna'
     },
     {
         nome: 'Martha'
@@ -279,7 +279,6 @@ export const InfoDogs = [
         nome: 'Pinkman'
     },
     {
-
         nome: 'Hermione'
     },
     {
@@ -622,7 +621,7 @@ export const InfoDogs = [
         nome: 'Tahir'
     },
     {
-        nome: 'Sakê'
+        nome: 'Pluto'
     },
     {
         nome: 'Sinatra'
@@ -664,7 +663,7 @@ export const InfoDogs = [
         nome: 'Zoe'
     },
     {
-        nome: 'Zazá'
+        nome: 'Zezé'
     },
     {
         nome: 'Dudu'

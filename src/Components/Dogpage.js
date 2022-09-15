@@ -1,48 +1,51 @@
-import React, {useState, useEffect}  from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { InfoDogs} from "./Info.js";
+import { InfoDogs } from "./Info.js";
 import * as S from "./Style.js"
 
 
-export default function DogPage(){
-  const [data,setData] = useState(null)
+export default function DogPage() {
+  const [data, setData] = useState(null)
   const [i, setI] = useState(0)
   const [h, setH] = useState(0)
-  const [age, setAge] = useState((Math.floor(Math.random() * 11)))
+  const [a, setA] = useState((Math.floor(Math.random() * 10))) // indice que informará as idades
+  const [age, setAge] = useState([1,2,3,4,5,6,7,8,9,10]) // idades para os cachorros
   let API = 'https://dog.ceo/api/breeds/image/random'
-  const DogsApi = () =>{
+  console.log(a + "indice array")
+  console.log(age[a]+ "numero array")
+  const DogsApi = () => {
     axios.get(API)
-    .then(res =>{
-      setData(res.data.message)
-      setTimeout(()=>{
-        if(i === Math.floor(Math.random() * 231 ) || Math.floor(Math.random() * 231 ) || Math.floor(Math.random() * 231 ) || Math.floor(Math.random() * 231 || 0 )){
-          setI(Math.floor(Math.random() * 231 ))
-          setAge((Math.floor(Math.random() * 11)))
-        } else {
-          setI(Math.floor(Math.random() * 231 ))
-          setAge((Math.floor(Math.random() * 11)))
-        }
-      },630)
-    })
-    .catch(error =>{
-      console.log('Desculpe vocÊ não conseguiu realizar a requisição', error)
-    })
+      .then(res => {
+        setData(res.data.message)
+        setTimeout(() => {
+          if (i === Math.floor(Math.random() * 231) || Math.floor(Math.random() * 231) || Math.floor(Math.random() * 231) || Math.floor(Math.random() * 231 || 0)) {
+            setI(Math.floor(Math.random() * 231))
+            setA((Math.floor(Math.random() * 10)))
+          } else {
+            setI(Math.floor(Math.random() * 231))
+            setA((Math.floor(Math.random() * 10)))
+          }
+        }, 630)
+      })
+      .catch(error => {
+        console.log('Desculpe vocÊ não conseguiu realizar a requisição', error)
+      })
   }
-  useEffect(()=>{
-    if(h === 0){
+  useEffect(() => {
+    if (h === 0) {
       DogsApi()
-      setH(h+1)
+      setH(h + 1)
     }
   })
-  return(
-  <>
-    <S.GlobalStyle/>
-    <S.Bigbox>
-    <h1>Dogs</h1>
-   <S.Imagem src={data} alt='oi'/>
-   <h2>{InfoDogs[i].nome} - {age} {age > 1 ? 'anos': 'ano'} {age=== 0 ? '9 meses': ''} </h2>
-   <button onClick={()=> {DogsApi()}}>teste</button>
-    </S.Bigbox>
-  </>
+  return (
+    <>
+      <S.GlobalStyle />
+      <S.Bigbox>
+        <h1>Cachorros para adoção</h1>
+        <S.Imagem src={data} alt='oi' />
+        <h2>{InfoDogs[i].nome} -  {age[a]} {age[a] > 1 ? 'anos' : 'ano'}  </h2>
+        <button onClick={() => { DogsApi() }}>teste</button>
+      </S.Bigbox>
+    </>
   )
 }
