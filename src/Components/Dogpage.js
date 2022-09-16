@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { InfoDogs } from "./Info.js";
+import { InfoDogs } from "./Infos/InfoDogs";
 import * as S from "./Style.js"
-
+import doguinho from "../Assets/doguinho.jpg"
 
 export default function DogPage() {
-  const [data, setData] = useState(null)
+  const [data, setData] = useState(doguinho)
   const [i, setI] = useState(0)
   const [h, setH] = useState(0)
-  const [a, setA] = useState((Math.floor(Math.random() * 10))) // indice que informará as idades
+  const [a, setA] = useState(1) // indice que informará as idades
   const [age, setAge] = useState([1,2,3,4,5,6,7,8,9,10]) // idades para os cachorros
   let API = 'https://dog.ceo/api/breeds/image/random'
   console.log(a + "indice array")
@@ -31,12 +31,7 @@ export default function DogPage() {
         console.log('Desculpe vocÊ não conseguiu realizar a requisição', error)
       })
   }
-  useEffect(() => {
-    if (h === 0) {
-      DogsApi()
-      setH(h + 1)
-    }
-  })
+ 
   return (
     <>
       <S.GlobalStyle />

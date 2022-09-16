@@ -1,8 +1,6 @@
-import React from "react";
-
 export const InfoDogs = [
     {
-        nome: '',
+        nome: 'Marley',
     },
     {
         nome: 'Bob'
