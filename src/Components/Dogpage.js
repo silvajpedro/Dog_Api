@@ -36,10 +36,15 @@ export default function DogPage() {
     <>
       <S.GlobalStyle />
       <S.Bigbox>
+        <section>
         <h1>Cachorros para adoção</h1>
         <S.Imagem src={data} alt='oi' />
         <h2>{InfoDogs[i].nome} -  {age[a]} {age[a] > 1 ? 'anos' : 'ano'}  </h2>
-        <button onClick={() => { DogsApi() }}>teste</button>
+        <div>
+        <button onClick={() => { DogsApi() }}>Adotar</button>
+        <button onClick={() => { DogsApi() }}>Próximo</button>
+        </div>
+        </section>
       </S.Bigbox>
     </>
   )

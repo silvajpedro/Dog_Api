@@ -31,12 +31,15 @@ export default function CatPage(){
   <>
     <S.GlobalStyle/>
     <S.Bigbox>
-      <div>
+      <section>
     <h1>Gatos para adoção</h1>
    <S.Imagem src={catsImg} alt='oi'/>
    <h2>{InfoCats[i].nome} - {age[a]} {age[a] > 1 ? 'anos' : 'ano'}  </h2>
-   <button onClick={()=> {CatApi()}}>teste</button>
+      <div>
+      <button onClick={() => {}}>Adotar</button>
+        <button onClick={() => { CatApi() }}>Próximo</button>
       </div>
+      </section>
     </S.Bigbox>
   </>
   )

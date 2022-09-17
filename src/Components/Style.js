@@ -18,17 +18,55 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 background-color: white;
-div{
+section{
+    position: relative;
     display: flex;
+    top: -1.5vh;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: -8vh;
+    justify-content: space-evenly;
+    height: 85vh;
+    border-radius: 20px;
+    width: 40vw;
 }
 h1{
+    text-align: center;
+    position: relative;
+    top: -2vh;
     font-family:"Satisfy", sans-serif ;
-    color: black; ;
-    font-size: 60px;
+    color: black;
+    background-color: white;
+    font-size: 48px;
+    border: solid;
+    border-radius: 20px;
+    width: 40vw;
+}
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -2vh;
+    width: 20vw;
+    height: 6vh;
+    border: solid;
+    border-radius: 30px;
+    background-color: white;
+}
+div{
+    display: flex;
+    justify-content: space-between;
+    width: 22vw;
+    button{
+        width: 9vw;
+        height: 7vh;
+        border-radius:30px;
+        font-size: 22px;
+        cursor: pointer;
+        &:hover{
+            transform: scale(105%);
+        }
+    }
 }
 background-repeat: no-repeat;
     background-image:url(${patinhas3}) ;
@@ -77,8 +115,10 @@ transition: ease-in-out;
 `
 
 export const Imagem = styled.img`
+position: relative;
+top: -2vh;
 border-radius: 100px;
 border:solid;
 outline: white solid;
-height: 50vh;
+height: 46vh;
 `;
