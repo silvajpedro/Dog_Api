@@ -231,10 +231,10 @@ export const InfoCats = [
         nome: 'Pantera'
     },
     {
-        nome: 'Ametista Cristina'
+        nome: 'Ametista '
     },
     {
-        nome: 'Jasper Guilherme'
+        nome: 'Jasper'
     },
     {
         nome: 'Floquinho'

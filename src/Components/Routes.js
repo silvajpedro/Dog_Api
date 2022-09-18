@@ -1,21 +1,25 @@
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import Cat from "./Catpage.js";
 import Dog from "./Dogpage.js";
-import logo from "../Assets/logo_big.png"
+import logo2 from "../Assets/logo2.png"
+import gato from "../Assets/gato.png"
+import cachorro from "../Assets/cachorro.png"
 import * as S from "./Style.js"
 export default function Rota({Rota1, Rota2}){
     return(
         <BrowserRouter>
         <S.Header>
-            <img src={logo} alt="" />
+            <img src={logo2} alt="" />
         <nav>
             <ul>
                 <li>
-                    <S.Links to="/">{Rota1}</S.Links>
+                 <S.Links to="/">{Rota1}</S.Links>
+                <img src={cachorro} alt=""/>  
                 </li>
                 <li>
-                    <S.Links to="/cat">{Rota2}</S.Links>
+                 <S.Links to="/cat">{Rota2}</S.Links>
+                <img src={gato}  alt=""/>
                 </li>
             </ul>
         </nav>
