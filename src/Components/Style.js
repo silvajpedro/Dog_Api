@@ -15,7 +15,11 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-background-color: white;
+background-repeat: no-repeat;
+background-image:url(${grama}) ;
+background-position: 0px -80px;
+background-size: 100%;
+height: 89vh;
 section{
     position: relative;
     display: flex;
@@ -54,8 +58,7 @@ h2{
     background-color: #F0F0F0;
 }
 div{
-    position: relative;
-    z-index: 10;
+  
     display: flex;
     justify-content: space-between;
     width: 23vw;
@@ -78,11 +81,6 @@ div{
         }
     }
 }
-background-repeat: no-repeat;
-background-image:url(${grama}) ;
-background-position: 0px -80px;
-background-size: 100%;
-height: 89vh;
 `
 // Rotas
 export const Header = styled.header`
@@ -128,10 +126,6 @@ font-family: "Satisfy", sans-serif;
 font-weight: 500;
 text-decoration: none;
 color: black;
-transition: ease-in-out;
-&:hover{
-
-}
 `
 export const Imagem = styled.img`
 position: relative;
@@ -144,7 +138,7 @@ height: 46vh;
 
 export const CaixaCadastro = styled.section`
 position: absolute;
-top: 0vh;
+top: -0.5vh;
 width: 100%;
 height: 100vh;
 display: flex;
@@ -154,6 +148,8 @@ justify-content: center;
 export const Cadastro = styled.div`
 display: flex;
 justify-content: center;
+flex-direction: column;
+align-items: center;
 height: 72vh;
 width: 30vw;
 border-radius: 30px;
@@ -161,6 +157,56 @@ background-color:#F0F0F0 ;
 border: solid;
 position:relative;
 z-index: 10;
+h1{
+    font-size: 38px;
+    font-family: "Satisfy", sans-serif;
+}
+form{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 58vh;
+    label{
+        position: relative;
+        left: 0.6vw;
+        font-size: 25px;
+        font-family: "Lobster", sans-serif;
+    }
+    input{
+        width: 20vw;
+        height: 6.8vh;
+        border-radius: 5px;
+        border: solid 2px;
+        font-size: 21px;
+        padding-left: 5px;
+    }
+    input::placeholder{
+        position: relative;
+        top: 0.3vh;
+    }
+    div{
+        position: relative;
+        top: 0.5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 6.5vh;
+        button{
+            width: 9vw;
+            height: 5.5vh;
+            border-radius:20px;
+            font-size: 26px;
+            font-family:"Lobster", sans-serif;
+            cursor: pointer;
+            background-color: white;
+            &:hover{
+                transform: scale(106%);
+            }
+        }
+    }
+}
 `
 
 export const Fume = styled.div`
@@ -171,4 +217,35 @@ height: 100vh;
 width: 100%;
 background-color: black;
 opacity: 0.5;
+`
+export const CaixaLinha = styled.div`
+position: absolute;
+top: 11.6vh;
+width: 100%;
+height: 2vh;
+z-index: 10;
+`
+export const Validar = styled.div`
+position: absolute;
+top: 2vh;
+right: 45vw;
+width: 10vw;
+height: 5vh;
+background-color: green;
+z-index: 100;
+`
+export const Linha = styled.span`
+position: absolute;
+width: 0vw;
+height: 0.8vh;
+background-color: #34C1FF;
+transition: ease-in-out 2.5s;
+`
+export const X = styled.img`  
+    position: absolute;
+    z-index: 10;
+    height: 10vh;
+    top: 1vh;
+    right: 2vw;
+    cursor: pointer;
 `
