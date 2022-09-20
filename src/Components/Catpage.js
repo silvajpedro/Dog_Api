@@ -33,18 +33,18 @@ export default function CatPage(){
   <main>
     <S.GlobalStyle/>
     <S.Bigbox>
-    { open && <S.X src={X} alt="" onClick={() => {setOpen(open !== true ? true:false)}} /> }
+    { open && <S.X src={X} alt="icone de fechar página" onClick={() => {setOpen(open !== true ? true:false)}} /> }
       <section>
     <h1>Gatos para adoção</h1>
-   <S.Imagem src={catsImg} alt='oi'/>
+   <S.Imagem src={catsImg} alt='imagem dos cachorros para adoção'/>
    <h2>{InfoCats[i].nome} - {age[a]} {age[a] > 1 ? 'anos' : 'ano'}  </h2>
       <div>
-      <button onClick={() => {setOpen(open !== true ? true:false)}}>Adotar<img src={patas} alt="" /></button>
-        <button onClick={() => { CatApi() }}>Próximo <img src={patas} alt="" /></button>
+      <button onClick={() => {setOpen(open !== true ? true:false)}}>Adotar<img src={patas} alt="icone de patinhas de cachorro" /></button>
+        <button onClick={() => { CatApi() }}>Próximo <img src={patas} alt="icone de patinhas de cachorro" /></button>
       </div>
       </section>
     </S.Bigbox>
-   {open && <OutroComponente/>}
+   {open && <OutroComponente animal={'Nome do Gato'}/>}
   </main>
   )
 }

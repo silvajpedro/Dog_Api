@@ -39,18 +39,18 @@ export default function DogPage() {
     <main >
       <S.GlobalStyle/>
       <S.Bigbox>
-      { open && <S.X src={X} alt="" onClick={() => {setOpen(open !== true ? true:false)}} /> }
+      { open && <S.X src={X} alt="icone de fechar página" onClick={() => {setOpen(open !== true ? true:false)}} /> }
         <section>
         <h1>Cachorros para adoção</h1>
-        <S.Imagem src={dogsImg} alt='oi' />
+        <S.Imagem src={dogsImg} alt='imagem dos cachorros para adoção' />
         <h2>{InfoDogs[i].nome} -  {age[a]} {age[a] > 1 ? 'anos' : 'ano'}  </h2>
         <div>
-        <button onClick={() => {setOpen(open !== true ? true: false)  }}> Adotar<img src={patas} alt="" /></button>
-        <button onClick={() => { DogsApi() }}>Próximo<img src={patas} alt="" /></button>
+        <button title="Botão de adotar animal" onClick={() => {setOpen(open !== true ? true: false)  }}> Adotar<img src={patas} alt="icone de patinhas de cachorro" /></button>
+        <button title="Botão próximo cachorro" onClick={() => { DogsApi() }}>Próximo<img src={patas} alt="icone de patinhas de cachorro" /></button>
         </div>
         </section>
       </S.Bigbox>
-      { open && <OutroComponente/>}
+      { open && <OutroComponente animal={'Nome do Cachorro'}/>}
     </main>
   )
 }

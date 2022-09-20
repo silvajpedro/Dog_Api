@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 `
+//Dogpage style / Catpage style
 export const Bigbox = styled.div`
 display: flex;
 flex-direction: column;
@@ -52,13 +53,12 @@ h2{
     height: 7.5vh;
     border: solid;
     border-radius: 30px;
-    font-size: 32px;
+    font-size: 33px;
     background-color: white;
     font-family: "Lobster", sans-serif;
     background-color: #F0F0F0;
 }
 div{
-  
     display: flex;
     justify-content: space-between;
     width: 23vw;
@@ -82,60 +82,7 @@ div{
     }
 }
 `
-// Rotas
-export const Header = styled.header`
-display: flex;
-align-items: center;
-justify-content:flex-start;
-width: 100%;
-background-color:#F0F0F0;
-img{
-    position: relative;
-    height: 11.07vh;
-    left: 2vw;
-}
-nav{
-    position: relative;
-    left: 4vw;
-    display: flex;
-    align-items: center;
-}
-ul{
-    display: flex;
-    list-style: none;
-    justify-content:space-between;
-    align-items: center;
-    width: 28vw;
-    li{
-    display: flex;
-    align-items: center;
-    font-size:41px;
-    height:10vh;
-    &:hover{
-        transform: scale(105%);
-    }
-    img{
-        height:8vh ;
-        left: 0vw;
-    }
-    }
-}
-`
-export const Links = styled(Link)`
-font-family: "Satisfy", sans-serif;
-font-weight: 500;
-text-decoration: none;
-color: black;
-`
-export const Imagem = styled.img`
-position: relative;
-top: -2vh;
-border-radius: 100px;
-border:solid;
-outline: white solid;
-height: 46vh;
-`;
-
+//Adopt  Style
 export const CaixaCadastro = styled.section`
 position: absolute;
 top: -0.5vh;
@@ -208,7 +155,6 @@ form{
     }
 }
 `
-
 export const Fume = styled.div`
 position: absolute;
 z-index: 1;
@@ -257,4 +203,57 @@ export const X = styled.img`
     top: 1vh;
     right: 2vw;
     cursor: pointer;
-`
+    `
+// Routes style
+export const Header = styled.header`
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    width: 100%;
+    background-color:#F0F0F0;
+    img{
+        position: relative;
+        height: 11.07vh;
+        left: 2vw;
+    }
+    nav{
+        position: relative;
+        left: 4vw;
+        display: flex;
+        align-items: center;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content:space-between;
+        align-items: center;
+        width: 28vw;
+        li{
+        display: flex;
+        align-items: center;
+        font-size:41px;
+        height:10vh;
+        &:hover{
+            transform: scale(105%);
+        }
+        img{
+            height:8vh ;
+            left: 0vw;
+        }
+        }
+    }
+    `
+export const Links = styled(Link)`
+    font-family: "Satisfy", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    `
+export const Imagem = styled.img`
+    position: relative;
+    top: -2vh;
+    border-radius: 100px;
+    border:solid;
+    outline: white solid;
+    height: 46vh;
+    `;
