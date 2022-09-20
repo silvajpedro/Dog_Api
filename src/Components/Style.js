@@ -227,12 +227,21 @@ z-index: 10;
 `
 export const Validar = styled.div`
 position: absolute;
-top: 2vh;
-right: 45vw;
-width: 10vw;
-height: 5vh;
-background-color: green;
+top: -1vh;
+right: 37.5vw;
+width: 25vw;
+height: 9vh;
+background-color:transparent;
 z-index: 100;
+border-radius: 5px;
+transition: ease-in-out 1.3s;
+h2{
+    position: relative;
+    left: 0.5vw;
+    color: transparent;
+    font-size: 20px;
+    transition: ease-in-out 1.6s;
+}
 `
 export const Linha = styled.span`
 position: absolute;
