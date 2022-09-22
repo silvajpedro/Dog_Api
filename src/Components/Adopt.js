@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import * as S from "./Style.js"
+import InputMask from "react-input-mask";
 
 export default function OutroComponente({animal}){
     const [fName, setfName] = useState('')
     const [fAnimal, setfAnimal] = useState('')
     const [fTelephone, setfTelephone] = useState('')
     const [fEmail, setfEmail ] = useState('')
-    
+
+
     const validaInput = () =>{
       if(fName !== '' && fAnimal !== '' && fTelephone !== '' && fEmail !== ""){
       setTimeout(()=>{
@@ -53,13 +55,13 @@ export default function OutroComponente({animal}){
         <h1>Formulário de adoção</h1>
         <form onSubmit={(e) => e.preventDefault()}>
         <label for="nome">Nome Completo</label>
-        <input pattern="^[^-\s][a-zA-ZÀ-ú ]*" value={fName} onChange={(e) => {setfName(e.target.value)}} type="text" id="nome" name="nome" placeholder="Seu nome Completo"  required />
+        <InputMask value={fName} onChange={(e) => {setfName(e.target.value)}} type="text" id="nome" name="nome" placeholder="Seu nome Completo"  required />
         <label for="adotado">{animal}</label>
-        <input value={fAnimal} onChange={(e) => {setfAnimal(e.target.value)}} type="text" id="adotado" name="adotado"  placeholder="Que vai ser adotado" required /> 
+        <InputMask value={fAnimal} onChange={(e) => {setfAnimal(e.target.value)}} type="text" id="adotado" name="adotado"  placeholder="Que vai ser adotado" required /> 
         <label for="tel">Telefone/WhatsApp</label>
-        <input value={fTelephone} onChange={(e) => {setfTelephone(e.target.value)}} type="tel" id="tel" name="tel" placeholder="(DDD)XXXX-XXXX" required/>
+        <InputMask  mask='(99)99999-9999' value={fTelephone} onChange={(e) => {setfTelephone(e.target.value)}}  type="tel" id="tel" name="tel" placeholder="(DDD)XXXX-XXXX"  required/>
         <label for="email">E-mail</label>
-        <input value={fEmail} onChange={(e) => {setfEmail(e.target.value)}} type="email" id="email" name="email" placeholder="Seu melhor e-mail" required/>
+        <InputMask value={fEmail} onChange={(e) => {setfEmail(e.target.value)}} type="email" id="email" name="email" placeholder="Seu melhor e-mail" required/>
         <div>
         <button value="submit" onClick={()=> {validaInput()}}>Enviar</button>
         </div>
