@@ -82,6 +82,13 @@ div{
     }
 }
 `
+export const NameDog = styled.p`
+display: flex;
+justify-content:center;
+align-items: center;
+width: 11vw;
+font-size: "29px";
+`
 //Adopt  Style
 export const CaixaCadastro = styled.section`
 position: absolute;

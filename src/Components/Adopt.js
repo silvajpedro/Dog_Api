@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./Style.js"
 import InputMask from "react-input-mask";
-
+import Eyepassword from "../Assets/eyepassword.png"
 export default function OutroComponente({animal}){
     const [fName, setfName] = useState('')
     const [fAnimal, setfAnimal] = useState('')
@@ -53,7 +53,7 @@ export default function OutroComponente({animal}){
         </S.CaixaLinha>
       <S.Cadastro>
         <h1>Formulário de adoção</h1>
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form method="POST" action="https://formsubmit.co/silvajpro.31@gmail.com" onSubmit={(e) => e.preventDefault()}>
         <label for="nome">Nome Completo</label>
         <InputMask value={fName} onChange={(e) => {setfName(e.target.value)}} type="text" id="nome" name="nome" placeholder="Seu nome Completo"  required />
         <label for="adotado">{animal}</label>
@@ -63,7 +63,7 @@ export default function OutroComponente({animal}){
         <label for="email">E-mail</label>
         <InputMask value={fEmail} onChange={(e) => {setfEmail(e.target.value)}} type="email" id="email" name="email" placeholder="Seu melhor e-mail" required/>
         <div>
-        <button value="submit" onClick={()=> {validaInput()}}>Enviar</button>
+        <button type="submit" value="submit" onClick={()=> {validaInput()}}>Enviar</button>
         </div>
         </form>
       </S.Cadastro>
